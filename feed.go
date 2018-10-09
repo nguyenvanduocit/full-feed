@@ -35,6 +35,7 @@ func generateFeed(domain string) (*feeds.Feed, error) {
 			Title:       post.Title.Rendered,
 			Link:        &feeds.Link{Href: post.GUID.Rendered},
 			Description: post.Excerpt.Rendered,
+			Content:     post.Content.Rendered,
 		})
 	}
 
